@@ -1,0 +1,9 @@
+# Assignment Overview
+
+The New Horizons spacecraft, launched January 19th 2006, is the first earth spacecraft to have made contact with the planet Pluto. On January 1st, 2019 it is schedule to make contact with the first Kuiper belt object KBO-2014-KU69, [The NASA update page](http://pluto.jhuapl.edu/Mission/Where-is-New-Horizons.php) reports it (09/01/2017) at a distance of 39.33 Astronomical Units (AU) from the Sun, traveling away from the Sun at 14.24 km/sec, 8.85 mi/sec.
+
+For this lab you will use the **cin** and **cout** streams along with some simple mathematics for calculating New Horizon's distance. The important part of the project is to learn the skills needed to access the class web site, to access a project description, create a new program in C++ and finally to hand it in.
+
+## Your Task
+
+Your program will prompt the user for an integer number (a number without decimal points) which indicates the number of **days after** 09/01/2017, starting at the distance 39.33 AU from the sun. You will calculate the distance of New Horizons from the Sun using the numbers from 09/01/2017 (assume velocity is constant) **plus** the user provided number of days and report
