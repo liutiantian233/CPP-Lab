@@ -14,3 +14,11 @@ One such property is an integer's **additive persistence** and its resulting **a
 4. The sum of its digits is 1 + 0 = 1
 5. The integer is 1. When the value reaches a single digit, we are finished. This final integer is the additive root.
 
+The number of cycles is the additive persistence. The integer 1234 has an additive persistence of 2 (first sum was 10, then the second sum was 1). The final digit reached is called the integer’s additive root. The additive digital root of 1234 is 1.
+
+# Program Specifications
+
+The program should run as follows:
+
+1. Program takes in a single long from input, the number being checked.
+  - if the input long is 0 or less, print the single work "Error" and end the program.
