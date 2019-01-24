@@ -22,3 +22,8 @@ The program should run as follows:
 
 1. Program takes in a single long from input, the number being checked.
    - if the input long is 0 or less, print the single work "Error" and end the program.
+2. Otherwise, the output should be two space separated longs.
+   - the persistence
+   - the additive root
+3. If the input long is a single digit, report its additive persistence as 0 and its additive root is the input number.
+4. Otherwise calculate the additive persistence.
