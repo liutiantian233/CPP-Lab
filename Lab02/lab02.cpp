@@ -1,7 +1,7 @@
 #include <iostream>
-using std::cin; using std::cout; using std::endl;
+using std::cout; using std::cin; using std::endl;
 
-int main(){
+int main() {
     int num, b = 0, persistence = 0, c=0;
     cin >> num;
     if (num > 0 && num < 10){
