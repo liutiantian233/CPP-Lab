@@ -1,6 +1,6 @@
 #include <iostream>
 using std::cout; using std::cin; using std::endl; using std::fixed;
-#include<iomanip>
+#include <iomanip>
 using std::setprecision;
 
 int main() {
