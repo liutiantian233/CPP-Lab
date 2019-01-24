@@ -21,4 +21,4 @@ The number of cycles is the additive persistence. The integer 1234 has an additi
 The program should run as follows:
 
 1. Program takes in a single long from input, the number being checked.
-  - if the input long is 0 or less, print the single work "Error" and end the program.
+   - if the input long is 0 or less, print the single work "Error" and end the program.
