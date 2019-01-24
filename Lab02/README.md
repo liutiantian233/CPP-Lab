@@ -27,3 +27,11 @@ The program should run as follows:
    - the additive root
 3. If the input long is a single digit, report its additive persistence as 0 and its additive root is the input number.
 4. Otherwise calculate the additive persistence.
+
+## Getting Started
+
+1. Create the lab02.cpp in your favorite editor.
+2. Break the problem down into parts. Some obvious parts:
+   - gather input from the file, and check for negative numbers (the quit condition)
+   - check if the input is between 0 and 9.
+    - fas
