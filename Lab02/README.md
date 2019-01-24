@@ -34,4 +34,4 @@ The program should run as follows:
 2. Break the problem down into parts. Some obvious parts:
    - gather input from the file, and check for negative numbers (the quit condition)
    - check if the input is between 0 and 9.
-    - fas
+      - dfsdf
