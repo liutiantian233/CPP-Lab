@@ -6,7 +6,7 @@ int main() {
     cin >> num;
     
     if (num > 0 && num < 10) {
-        cout << " 0 " << num << endl;
+        cout << "0 " << num << endl;
         return 0;
     }
     
