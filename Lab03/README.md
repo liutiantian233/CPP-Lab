@@ -41,7 +41,13 @@ Please note that each **x** corresponds to an endpoint of the sides of the trape
 # Program Specifications
 
 1. Write three functions:
-   1. a function **fn** to integrate over. Let's use **fn -- -6x^2 + 5x + 3**
+   1. a function **fn** to integrate over. Let's use **fn is -6x^2 + 5x + 3**
       1. **fn** takes a single **double** parameter, the value x
       2. **fn** returns a **double**, the result of the function evaluated at x
-   2. a function **integral**, the actual integral of **fn** which is **integral -- -2x^3 + (5 / 2)x^2 + 3x**
+   2. a function **integral**, the actual integral of **fn** which is **integral is -2x^3 + (5 / 2)x^2 + 3x**
+      1. **integral** takes a single **double** parameter, x
+      2. **integral** returns a **double**, the result of the function evaluated at x
+   let's further fix the interval to calculate the integral over as 0 to 1
+   ![](https://raw.githubusercontent.com/liutiantian233/CPP-Lab/master/Lab03/lab03-6.png)
+   3. a function **trapezoid**. The specification for trapezoid is:
+      1. take in three parameters:
