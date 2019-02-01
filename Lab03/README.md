@@ -49,6 +49,7 @@ Please note that each **x** corresponds to an endpoint of the sides of the trape
       2. **integral** returns a **double**, the result of the function evaluated at x
    
    let's further fix the interval to calculate the integral over as 0 to 1
+   
    ![](https://raw.githubusercontent.com/liutiantian233/CPP-Lab/master/Lab03/lab03-6.png)
    
    3. a function **trapezoid**. The specification for trapezoid is:
