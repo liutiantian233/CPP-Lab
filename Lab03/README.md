@@ -54,3 +54,30 @@ Please note that each **x** corresponds to an endpoint of the sides of the trape
    
    3. a function **trapezoid**. The specification for trapezoid is:
       1. take in three parameters:
+         1. the two definite points of the integral **a** and **b** as doubles.
+         2. the number **n**, the number of trapezoids, a long.
+      2. calculates the area under the curve represented by the function **fn** given the provided number of trapezoids over the interval 0 to 1.
+      3. returns a double, the sum of the area of the trapezoids.
+2. A main function that does the following:
+   1. takes in two values (in order)
+      1. a float value tolerance
+      2. an initial guess at the number **n**, the number of trapezoids
+   2. you run a loop that measures the difference between the actual value of the integration (you have the **integral** function so you can calculate the exact value between **a** and **b**) and the estimated value from **trapezoid**.
+      1. the actual value is **integral(b)- integral(a)** from the fundamental theorem of calculus.
+      2. if the difference between the actual value and the estimated value is within tolerance, report to the user 4, space separated values on a single line. All output should be **fixed, setprecision(6)**.
+         1. n
+         2. estimate value
+         3. exact value
+         4. tolerance
+      3. if the difference is not within tolerance, **double** the value of **n** and rerun. Continue the doubling and re-running until the estimate of the **trapezoid** function it is within tolerance of the actual value from **integral**.
+
+# Example Run
+
+![](https://raw.githubusercontent.com/liutiantian233/CPP-Lab/master/Lab03/lab03-7.png)
+
+
+## Feedback and suggestions
+- E-mail：<liutia20@msu.edu>
+
+---------
+Thanks for reading this help document
