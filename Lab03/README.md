@@ -65,7 +65,7 @@ Please note that each **x** corresponds to an endpoint of the sides of the trape
    2. you run a loop that measures the difference between the actual value of the integration (you have the **integral** function so you can calculate the exact value between **a** and **b**) and the estimated value from **trapezoid**.
       1. the actual value is **integral(b)- integral(a)** from the fundamental theorem of calculus.
       2. if the difference between the actual value and the estimated value is within tolerance, report to the user 4, space separated values on a single line. All output should be **fixed, setprecision(6)**.
-         1. n
+         1. **n**
          2. estimate value
          3. exact value
          4. tolerance
