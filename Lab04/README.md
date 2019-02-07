@@ -58,3 +58,16 @@ sort(my_str.begin(), my_str.end());
 cout << my_str;  // prints abcde
 ```
 
+# Hints
+
+1. You could define a constant for each letter of the alphabet, but what a pain. Better to note the following. The smallest character of a location string is **'a'**, which represents 2^0 power (i.e. 1). The difference between any letter and **'a'** is the power of 2 the letter represents. For example:
+
+![](https://raw.githubusercontent.com/liutiantian233/CPP-Lab/master/Lab04/lab04-2.png)
+
+2. The function **dec_to_loc** is really nothing more than creating a "long string" and using **abbreviate** to clean it up. The **abbreviate** function is the key.
+3. The function **add_loc** is nothing more than a concatenation of the two strings, a call to **abbreviate**, followed by a call to **loc_to_dec**.
+4. Your functions will make use of:
+   1. substr method
+      1. substring takes two parameters: a position and a length. Length defaults to the end of the string (or if the value is beyond the length of the string, it defaults to the end.)
+   2. static_cast <char>
+      1. if you do addition/subtraction on a character, you need to cast it to a character for the "printable" version.
