@@ -17,3 +17,44 @@ a = 1, b = 2, c = 4, d = 8, e = 16, f = 32 ... and thus: acf = 1 + 4 + 32 = caf 
 For convenience, the letters are typically sorted but only to make reading easier. Napier allowed for redundant occurrences of letters, though he acknowledged that there is a normal form that had no repeats. He described this as the extended (repeated) vs. abbreviated (no repeats). To create the abbreviated form, any pair of letters can be reduced to a single occurrence of the next "higher letter". For example:
 
 ![](https://raw.githubusercontent.com/liutiantian233/CPP-Lab/master/Lab04/lab04-1.png)
+
+## Addition
+
+Addition is particularly easy. Take all the letters from the two values, put them into a single string, sort, reduce, convert!
+
+![](https://raw.githubusercontent.com/liutiantian233/CPP-Lab/master/Lab04/lab04-2.png)
+
+# Your Task
+
+Write the following four functions and main program to do location arithmetic:
+
+1. **long loc_to_dec(string loc)**: convert location arithmetic string to an integer.
+2. **string abbreviate(string loc)**: take a location string and reduce it to its abbreviated form. We want you to experiment with string manipulation so **you cannot convert it to integer** first. You must do the abbreviation directly.
+3. **string dec_to_loc(long dec)**: convert an integer to an **abbreviated** location string.
+4. **long add_loc(string loc1, string loc2)**: take two location strings, add them, provided the integer result. For this function, **do it the way described above!!** that is:
+   1. mix the strings
+   2. sort them
+   3. reduce the string (using your **abbreviate** function) convert 
+   4. the result (using your **loc_to_dec** function)
+5. Write a main function that shows off your work:
+   1. prompt for two elements: a location string and a long.
+   2. prints on a single line 4, space separated elements
+      1. loc__to_dec on the input location string
+      2. abbreviate on the input location string
+      3. dec_to_long on the input long
+      4. add_loc using the input location string twice (adding it to itself)
+
+## Sorting
+
+We haven't done sorting yet, but C++ makes it pretty easy. There's an example in the directory, but here is the gist. Sorting sorts the individual elements of a collection in sorted order from two points in the collection. Elements in strings are chars, so sorting from the beginning to the end of the string, character by character, is shown below. Note that sorting changes the string in place!
+
+```c++
+#include <string>
+using std::string;
+...
+// sort string, char by char, in place, from begin() to end(). Note the parentheses!
+string my_str = "aebcd";
+sort(my_str.begin(), my_str.end());
+cout << my_str;  // prints abcde
+```
+
