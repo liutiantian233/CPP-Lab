@@ -81,4 +81,11 @@ cout << my_str;  // prints abcde
    3. push_back method
    
       1. you can push a character onto the end of the string using this method.
+      
    4. indexing via the [ ] operator
+
+## Feedback and suggestions
+- E-mail：<liutia20@msu.edu>
+
+---------
+Thanks for reading this help document
