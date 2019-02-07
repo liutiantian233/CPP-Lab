@@ -62,7 +62,7 @@ cout << my_str;  // prints abcde
 
 1. You could define a constant for each letter of the alphabet, but what a pain. Better to note the following. The smallest character of a location string is **'a'**, which represents 2^0 power (i.e. 1). The difference between any letter and **'a'** is the power of 2 the letter represents. For example:
 
-![](https://raw.githubusercontent.com/liutiantian233/CPP-Lab/master/Lab04/lab04-2.png)
+![](https://raw.githubusercontent.com/liutiantian233/CPP-Lab/master/Lab04/lab04-3.png)
 
 2. The function **dec_to_loc** is really nothing more than creating a "long string" and using **abbreviate** to clean it up. The **abbreviate** function is the key.
 
