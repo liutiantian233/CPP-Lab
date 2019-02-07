@@ -11,3 +11,10 @@ using std::sort;
 /*
 sort individual characters of a string
 */
+
+int main() {
+  string my_str = "aebcd";
+  cout << "String was:" << my_str;
+  sort(my_str.begin(), my_str.end());
+  cout << ", and sorted is:" << my_str <<endl;
+}
