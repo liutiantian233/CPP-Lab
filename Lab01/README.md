@@ -12,7 +12,7 @@ Your program will prompt the user for an integer number (a number without decima
 - Distance in kilometers (1 AU = 149,598,000 km) on a line by itself
 - Distance in miles (1 AU = 92,955,800 mile) on a line by itself
 - Round trip time for radio communication in hours. Radio waves travel at the speed of light, listed at 299,792,458 meters/second, on a line by itself
-- provide 2 decimal points of accuracy using **std::fixed** and **std::setprecision** (the later requiring #include <iomanip>).
+- provide 2 decimal points of accuracy using **std::fixed** and **std::setprecision** (the later requiring #include <_iomanip_>).
 
 # Assignment Notes
 
