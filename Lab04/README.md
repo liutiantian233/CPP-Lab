@@ -67,7 +67,7 @@ cout << my_str;  // prints abcde
 4. Your functions will make use of:
    1. substr method
       1. substring takes two parameters: a position and a length. Length defaults to the end of the string (or if the value is beyond the length of the string, it defaults to the end.)
-   2. static_cast < char>
+   2. **static_cast<_char_>**
       1. if you do addition/subtraction on a character, you need to cast it to a character for the "printable" version.
    3. push_back method
       1. you can push a character onto the end of the string using this method.
