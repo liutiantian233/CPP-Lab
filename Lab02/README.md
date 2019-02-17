@@ -35,12 +35,12 @@ The program should run as follows:
    - gather input from the file, and check for negative numbers (the quit condition)
    - check if the input is between 0 and 9.
    
-     that's a special case as indicated.
-     
+   that's a special case as indicated.
+   
    - otherwise write a loop that calculates the persistence.
-     
-     track the count through this loop
-     
+   
+   track the count through this loop
+   
    - inside that write a loop that can sum the digits of an integer until it reaches a single digit.
 3. How do you get the digits of an integer? Look at a combination of division (/) and remainder (%) operators on integers.
 4. I would add some “diagnostic output” so you can be sure things are working as they should. For each pass through the loop of the additive persistence, print each new integer created. Feel free to always do this as you need to work on your ability to debug problems. You can always fix it to give the exact, required output later.
@@ -70,7 +70,9 @@ As before, the number of cycles is the multiplicative persistence and the final 
 - what happens when you enter a number that is too large? For example, the smallest number with and additive persistence of 4 is 19999999999999999999999. Can you make your calculation with that number?
 
 ## Feedback and suggestions
+
 - E-mail：<liutia20@msu.edu>
 
 ---------
+
 Thanks for reading this help document
