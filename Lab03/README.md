@@ -75,9 +75,10 @@ Please note that each **x** corresponds to an endpoint of the sides of the trape
 
 ![](https://raw.githubusercontent.com/liutiantian233/CPP-Lab/master/Lab03/lab03-7.png)
 
-
 ## Feedback and suggestions
+
 - E-mail：<liutia20@msu.edu>
 
 ---------
+
 Thanks for reading this help document
