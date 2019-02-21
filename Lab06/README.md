@@ -48,7 +48,7 @@ hello mom and dad ——> {hello, mom, and, dad}
 
 - Open **splitter-functions.h** and store the function **declaration** of **split** there. The declaration should be:
 
-`vector<string> split (const string &s, char separator=' ');`
+`vector<string> split(const string &s, char separator=' ');`
 
 - As discussed, default parameter values **go in the header file only**. The default does not occur in the definition if it occurred in the declaration.
 - This header file should wrap all declarations using the **#ifndef, #define, #endif** as discussed above. Make up your own variable name.
@@ -61,7 +61,7 @@ This function prints all the elements of `vector<string> v` with each element of
 
 - **print_vector**: Store the declaration in **splitter-functions.h** then place function definition in **print-vector** in **splitter-functions.cpp**. The declaration should look a lot like the below:
 
-`void print_vector (ostream &out, const vector<string> &v);`
+`void print_vector(ostream &out, const vector<string> &v);`
 
 ## Function main
 
