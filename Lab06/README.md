@@ -109,3 +109,11 @@ Let's play a little more with vectors. Let's write a function that can add and s
       4. if op is something else, return an empty `vector<long>`
 
 4. Write a **vecops-main.cpp** and test your function by sending in two vectors and printing the result
+
+## Feedback and suggestions
+
+- E-mail：<liutia20@msu.edu>
+
+---------
+
+Thanks for reading this help document
