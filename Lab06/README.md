@@ -95,7 +95,7 @@ Let's play a little more with vectors. Let's write a function that can add and s
 2. The **vecops-functions.h** has the following function signatures:
 
    1. `vector<long> vector_ops(const vector<long>& v1, const vector<long>& v2, char op)`
-   2. `void print_vector (ostream &out, const vector<long> &v);`
+   2. `void print_vector(ostream &out, const vector<long> &v);`
 
    Reuse **print_vector** from the previous problem, but make it a vector of longs instead of a vector of strings
 
