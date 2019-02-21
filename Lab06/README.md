@@ -83,3 +83,29 @@ Write the **main** function and place it in **splitter-main.cpp**.
       2. example **getline(stream, line, delim)** gets the string from the stream **(istream, ifstream, istringstream, etc.)** up to the end of the line or the delim character.
       3. string methods **find** and **substr**. You can use the **find** method to find the delim character, extract the split element using **substr**, and **push_back** the element onto the vector.
    2. Default parameter value. The default parameter value needs to be set at **declaration time**, which means that the default value for a function parameter should be in the header file (the declaration). If it is in the declaration, it is not required to be in the definition, and by convention should not be.
+
+# Programming Task 2
+
+Let's play a little more with vectors. Let's write a function that can add and subtract the elements of two vectors.
+
+1. Create a new directory in your **lab6** directory called **vecops**
+
+   1. three files again: **vecops-main.cpp, vecops-functions.cpp, vecops-functions.h**
+
+2. The **vecops-functions.h** has the following function signatures:
+
+   1. `vector<long> vector_ops(const vector<long>& v1, const vector<long>& v2, char op)`
+   2. `void print_vector (ostream &out, const vector<long> &v);`
+
+   Reuse **print_vector** from the previous problem, but make it a vector of longs instead of a vector of strings
+
+3. In **vecops-functions.cpp** write the function **vector_ops** to do the following:
+
+   1. find the shorter of the two vectors
+   2. for each element in both vectors, up to the length of the shorter vector 
+      1. if the op is +, add each element into a new vector (to be returned)
+      2. if the op is -, subtract the shorter vector element from the longer vector element into a new vector.
+      3. after the operation, copy the remaining elements from the longer vector in the result vector
+      4. if op is something else, return an empty `vector<long>`
+
+4. Write a **vecops-main.cpp** and test your function by sending in two vectors and printing the result
