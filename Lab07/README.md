@@ -122,7 +122,7 @@ In the include file `iomanip` is an io manipulator `setw`. It sets the width for
 1. Write a function, test a function, write the next function, test that function, etc. This is the way you figure things out, one by one.
 2. You can make a temporary row (of type `matrix_row`) and `push_back` values on to that. You can then `push_back` the row onto a matrix (of type `matrix`). You can reuse the row in the your loop, but remember to `clear()` it first.
 
-# Feedback and suggestions
+## Feedback and suggestions
 
 - E-mail：<liutia20@msu.edu>
 
