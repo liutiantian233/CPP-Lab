@@ -110,7 +110,7 @@ Let's play a little more with vectors. Let's write a function that can add and s
 
 4. Write a **vecops-main.cpp** and test your function by sending in two vectors and printing the result
 
-## Feedback and suggestions
+# Feedback and suggestions
 
 - E-mail：<liutia20@msu.edu>
 
