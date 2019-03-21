@@ -25,3 +25,27 @@ Make a `MathVector struct`. Data members are:
 
 - `long x`
 - `long y`
+
+Constructors are:
+
+- default constructor
+- two args, each a long, constructor: first arg is the x value, the second is the y value. No defaults.
+
+The member functions are:
+
+- `MathVector add(const MathVector&)`: Single arg a `const` ref to `MathVector`. Adds two `MathVectors` as described. Returns a new `MathVector`.
+- `MathVector mult(long)`: Multiplies a single `MathVector` element by a long as described. Returns a new `MathVector`.
+- `long mult(const MathVector&)`: Single arg a `const` ref to `MathVector`. Multiplies the two `MathVectors` as a dot product, yielding a `long` as described above.
+- `double magnitude()`: No args. Calculate the magnitude of the `MathVector` as described. Returns a double.
+
+Make the following **regular function** (not a member)
+
+- `string vec_to_str(const MathVector &v)`: No args, returns a `string` representation of the `MathVector` in the format: "x:y"
+
+## Feedback and suggestions
+
+- E-mail：<liutia20@msu.edu>
+
+---------
+
+Thanks for reading this help document
