@@ -11,3 +11,17 @@ A vector is basically an arrow that has a magnitude (a length) and a direction (
 ![](https://raw.githubusercontent.com/liutiantian233/CPP-Lab/master/Lab09/Lab09-1.png)
 
 ![](https://raw.githubusercontent.com/liutiantian233/CPP-Lab/master/Lab09/Lab09-2.png)
+
+Here are some of the operations you can perform on your new `MathVector` struct.
+
+- `MathVector` addition. If V1 is (x, y) and V2 is (a, b), the V + W is a new `MathVector` with the values (x + a, y + b)
+- `MathVector` multiplication by a scalar integer type. If V1 is (x, y), then V * n is (x * n, y * n), returning a new `MathVector`
+- `MathVector` multiplication with another `MathVector`. There are two possibilities, dot product or cross product. We'll do **dot product**. If V = (x, y) and W = (a, b), then V * W = x * a + y * b, a scalar. Thus the dot product returns a scalar type `long`, **not** a `MathVector`
+- `MathVector` magnitude. The magnitude based on the Pythagorean theorem. For V = (x, y), the magnitude is sqrt(x^2 + y^2)
+
+## Your Tasks
+
+Make a `MathVector struct`. Data members are:
+
+- `long x`
+- `long y`
