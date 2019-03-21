@@ -3,6 +3,12 @@
 #include <cmath>
 using std::sqrt; using std::pow;
 
+#include <sstream>
+using std::ostringstream;
+
+#include <iostream>
+using std::endl;
+
 MathVector::MathVector(long a, long b) {
     x = a;
     y = b;
@@ -25,5 +31,9 @@ double MathVector::magnitude() {
 }
 
 string vec_to_str(const MathVector &v) {
-    return (std::to_string(v.x) + ":" + std::to_string(v.y));
+    //return (std::to_string(v.x) + ":" + std::to_string(v.y));
+    ostringstream os;
+
+    os << v.x << ":" << v.y << endl;
+    return os.str();
 }
