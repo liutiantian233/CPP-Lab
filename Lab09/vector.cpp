@@ -34,6 +34,6 @@ string vec_to_str(const MathVector &v) {
     //return (std::to_string(v.x) + ":" + std::to_string(v.y));
     ostringstream os;
 
-    os << v.x << ":" << v.y << endl;
+    os << v.x << ":" << v.y;  // << endl;
     return os.str();
 }
