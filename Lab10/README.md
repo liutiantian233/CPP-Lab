@@ -44,3 +44,68 @@ The `CircBuf` class will have an underlying data member `buf_` of type `vector<l
 - `long front() const`: member function, no parameters
   - if `CircBuf` is not empty, returns the long indexed by `head_`
   - if the `CircBuf` is empty, throws a `runtime_error`
+- `long back() const`: member function, no parameters
+  - if `CircBuf` is not empty, returns the last long `tail_ - 1`
+  - if the `CircBuf` is empty, throws a `runtime_error`
+- `void remove()`: member function, no parameters
+  - if `CircBuf` is not empty, advances `head_` by one
+  - if the `CircBuf` is empty, throws a `runtime_error`
+- `void add(long)`: member function, single long parameter
+  - if `CircBuf` is not full, places the parameter in `buf_` at the index indicated by `tail_`, advances `tail_` by one with wrap around as described
+  - if `CircBuf` is full, throws a `runtime_error`
+- `bool empty() const`: member function, no parameters
+  - returns `true` if the `CircBuf` is empty, false otherwise
+- `bool full() const`: member function, no parameters
+  - returns `true` if the `CircBuf` is full, false otherwise
+
+## Friends
+
+- `ostream&operator << (ostream &out, const CircBuf &cb)`: This is a **friend** function (not a member). It prints the **values** at the front and back of the buffer (what is indexed by `head_` and one back from `tail_`), the `cnt_` of elements in the buffer and the underlying buffer array
+  - if the buffer is empty, prints a message `CircBuf empty`
+
+## Implementation
+
+The most important thing to note is the circular nature of the buffer as implemented in a vector. The two indicies: `head_` (where elements are read from) and `tail_` (where elements are added). They can wrap around the buffer like we have done with clock arithmetic:
+
+- if `back_` goes past the last index of the data structure, it "wraps around" to the first index using the modulus operator (%) based on the fixed buffer size
+- the same is true for `front_`
+- in this way you can keep reusing the underlying buffer
+
+![](https://raw.githubusercontent.com/liutiantian233/CPP-Lab/master/Lab10/Lab10-2.png)
+
+## Notes
+
+- `head_ == tail_` in two situations: full and empty. How to differentiate full from empty?
+- You have to be careful with a vector in this case. The vector will grow under a `push_back` but you want this buffer to be of a fixed size. How to deal with that?
+
+## Extra
+
+For those that find the above relatively straight forward to do, try the follow extra work:
+
+- it might seem a little odd, but you could overload the `+` operator to place the next element in the buffer (a different way to do add). It would have to allow statements like the following
+
+`cb = cb + 5;`
+
+`cb = 5 + cb;`
+
+In this case, the operator would make a new `CircBuf`, with the element added to the end. Thus this would be the addition of a `CircBuf` and a long.
+
+What to do for the fixed size of the newly made `CircBuf`? You could make the new buffer a straight copy of cb and throw an error if it exceeds the size. If not big enough, you could also make it one bigger. Which would be better?
+
+- if you are **really** bored, you could create the addition of two `CircBuf`. It would take the two contents and combine them. **Order here would be important** (contents of the lhs first followed by the rhs)
+
+`cb = cb + another_buff  # cb contents first, another_buf second`
+
+`cb = another_buf + cb  # another_buf contents first, cb second`
+
+Again, what to do with the fixed size of the returned buffer? This is a tougher call. It seems likely that the combined buffers could be too big (bigger than either of the two argument `CircBufs`). Should we throw an error or make the new `CircBuf` big enough to hold the result? Interesting problem.
+
+See, class design can be lots of fun!?
+
+## Feedback and suggestions
+
+- E-mail：<liutia20@msu.edu>
+
+---------
+
+Thanks for reading this help document
