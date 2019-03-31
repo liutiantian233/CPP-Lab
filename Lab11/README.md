@@ -34,3 +34,56 @@ I want you to add the needed functions in the provided main. Some comments about
   - set the pointer of the first array to the new memory
     - as it is a pointer reference, the change will be reflected in the main
   - return the new size
+
+- `pair<long*, size_t> copy_evens(long ary[], size_t sz)`: Takes in an array, created previously, and looks for the even values in that array. It dynamically creates a new array big enough to hold the even values and you must copy the even values from the original array into this new array. You return a pointer to the new array and its size as a pair.
+  - the original array is the first parameter
+  - the size of the original array is the second parameter
+  - you must determine the size needed to hold the new array before you allocate it
+  - once you allocate it you can fill it with the even values from ary
+  - you return a pair containing a pointer to the new array and its size
+
+Copy the main file provided into your code and provide the needed functions in that file. If you need functions besides the ones listed, go ahead and add them. Also, you must delete your dynamic memory in the main (see comment).
+
+```c++
+int main() {
+
+    long *ary;
+    long ary2[] = {10, 11, 12, 13, 14};
+    size_t ary2_sz = 5;
+
+    print_array(ary2, ary2_sz, cout);
+    cout << endl;
+
+    size_t sz_file = fill_from_file(ary, "tables.txt");
+    print_array(ary, sz_file, cout);
+    cout << endl;
+
+    size_t sz_concat = concatenate(ary, sz_file, ary2, ary2_sz);
+    print_array(ary, sz_concat, cout);
+    cout << endl;
+
+    pair<long*, size_t> p = copy_evens(ary, sz_concat);
+    print_array(p.first, p.second, cout);
+    cout << endl;
+
+    // add code to delete dynamic memory after this
+    delete [] ary;
+    delete [] p.first;
+
+}
+```
+
+Helpful C++ generic functions (look them up on the web)
+
+- `count_if`
+- `copy_if`
+
+What does a parameter declared with the type `long *&` mean? It means that what is being passed is a reference value for a pointer. If you change what the pointer points to in the function, that change will be reflected in the calling main.
+
+## Feedback and suggestions
+
+- E-mail：<liutia20@msu.edu>
+
+---------
+
+Thanks for reading this help document
