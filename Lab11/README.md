@@ -18,3 +18,19 @@ I want you to add the needed functions in the provided main. Some comments about
   - you must allocate the memory **in the function** for that array as you cannot know the size required until you read the file
     - the pointer reference should point to that dynamically allocated memory
   - it returns the size of the dynamically allocated array
+
+- `void print_array(long ary[], size_t sz, ostream &out)`: Prints all the values in the array.
+  - first parameter is the array
+  - second parameter is the size of the array
+  - third parameter is what stream
+  - if you use iterators (or their equivalent), it is a single line
+  - no return
+
+- `size_t concatenate(long *(&ary1), size_t sz1, long ary2[], size_t sz2)`: concatenates the contents of the second array onto the end of the first array. First array's size will therefore change. Returns the `size_t` of the first array now that it has been expanded. Second array is not changed.
+  - you have to allocate new memory in the function that is the size of the sum of the two sizes
+  - copy the contents of the first array into the new memory
+  - copy the contents of the second array (starting at the end of the first) into the new memory
+  - delete the first array
+  - set the pointer of the first array to the new memory
+    - as it is a pointer reference, the change will be reflected in the main
+  - return the new size
