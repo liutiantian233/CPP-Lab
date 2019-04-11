@@ -97,7 +97,7 @@ If you got this far, here is some more fun stuff. First the easy ones. Write the
 Then the harder ones. If you do dynamic memory, you should make your own copy constructor and `operator =`. So write the next three functions:
 
 - `vector(vector<T>&);`
-- `vector<T>& operator = (vector<T> const &);`
+- `vector& operator = (vector v);`
 - `~vector();`
 
 The copy constructor should:
