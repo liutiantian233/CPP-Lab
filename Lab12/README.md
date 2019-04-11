@@ -81,4 +81,57 @@ However, the next `push_back` might exceed the size of your memory. That's fine,
 
 ## `operator []`
 
-This is the operator that allows us to work with individual elements in our vector. `operator []` receives a single size_t argument which is the index in the original call and returns a reference to the element. It needs to be a reference so that what is returned is an lvalue (a location) so that an operation like
+This is the operator that allows us to work with individual elements in our vector. `operator []` receives a single `size_t` argument which is the **index** in the original call and returns a **reference** to the element. It needs to be a reference so that what is returned is an lvalue (a location) so that an operation like `v[2] = 0;` will compile. The code should do one of two things:
+
+- if the `index` requested is within the vector, return a reference to the element at that location
+- if it is not, throw a `range_error` (requires `#include <stdexcept>`) with an appropriate message. Look at the last lab.
+
+# Task 3
+
+If you got this far, here is some more fun stuff. First the easy ones. Write the following two functions:
+
+- a `front()` method that returns a **reference** to the front element of the vector
+- a `back()` method that returns a **reference** to the back element of the vector
+  - what should these do if the vector is empty? We have choices but let's throw another `range_error` in this case.
+
+Then the harder ones. If you do dynamic memory, you should make your own copy constructor and `operator =`. So write the next three functions:
+
+- `vector(vector<T>&);`
+- `vector<T>& operator = (vector<T> const &);`
+- `~vector();`
+
+The copy constructor should:
+
+- copy both `capacity_` and `size_` from `v` to the newly created instance
+- in the new created instance
+  - allocate the new required memory
+  - copy the elements from the argument vector to the newly created instance
+
+The `operator =` should basically do the same thing
+
+- think of using the copy and swap idiom discussed in the videos and in the slides
+
+Then `~vector()`, the destructor to `delete` memory when the created element goes out of scope or is otherwise destroyed.
+
+# Task 4
+
+Finally, if you are still here, let's make
+
+- a `clear()` method which removes all the data
+  - resets `size_` to 0 and `capacity_` to 10
+  - deletes the existing array memory (if there is any)
+- a `pop_back` method. FYI one would only do the following on a system with limited memory, but it is still good practice:
+  - it returns a template type, the last element of the vector
+  - removes the last element of the vector. The vector `size_` is now one less
+  - if after the removal the vector reaches 1/2 capacity (the `size_` is half of the `capacity_`), do what we did with `push_back` but in reverse
+    - make a `new_data` pointer of **half capacity**
+    - copy the `data_` to the `new_data`
+    - clean up as previously
+
+## Feedback and suggestions
+
+- E-mail：<liutia20@msu.edu>
+
+---------
+
+Thanks for reading this help document
