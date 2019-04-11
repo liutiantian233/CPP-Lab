@@ -56,3 +56,29 @@ std::vector
   - returns the `size_` value
 
 # Task 2
+
+Create two important methods
+
+- `void push_back(templatetype value);`
+- `templatetype& operator [] (size_t value);`
+
+## `push_back`
+
+Takes a single parameter of template type and adds it to the end of the vector.
+
+Remember the special functionality of `push_back`. It adds the provided parameter to the end of the vector. The parameter should be of template type. The end of the vector is the next open space. If `push_back` of the parameter does not exceed `capacity_`, just add it to the end and update `size_`.
+
+However, the next `push_back` might exceed the size of your memory. That's fine, remember a vector is never full (well, unless your machine runs out of memory). The `capacity_` of `vector` indicates how many elements it **can hold** before the memory pointed to by `data_` needs to grow. `size_` indicates how many it **actually**, presently holds. If a `push_back` exceeds `capacity_`, (if `size_` equals or exceeds `capacity_` by adding this new parameter) you must do the following:
+
+- Create a new memory allocation that is **twice the size** of present `capacity_`
+  - call the new pointer `new_data`
+- copy all the elements in `data_` into `new_data`
+- swap `data_` and `new_data` (now `data_` points to the larger memory)
+- delete `new_data` (which now points to the old memory)
+- update `capacity_`
+- `push_back` the new element onto vector
+- update `size_` by 1
+
+## `operator []`
+
+This is the operator that allows us to work with individual elements in our vector. `operator []` receives a single size_t argument which is the index in the original call and returns a reference to the element. It needs to be a reference so that what is returned is an lvalue (a location) so that an operation like
