@@ -28,6 +28,8 @@ About The Lab of C++ Language
 
 [The Lab 12 Web and C++ Code](https://github.com/liutiantian233/CPP-Lab/tree/master/Lab12)
 
+[The Lab 13 Web and C++ Code](https://github.com/liutiantian233/CPP-Lab/tree/master/Lab13)
+
 ## Feedback and suggestions
 
 - E-mail：<liutia20@msu.edu>
